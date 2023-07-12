@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Invoices</title>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body id="body">
+	<div class="container">
+		<header class="header">
+			<a href="#" class="header__logo">Invoices</a>
+			<!-- <div class="header__burger">
+				<span id="icon-menu" onclick="navToggle()" class="material-icons _active">
+					menu
+				</span>
+			</div> -->
+			<nav id="nav" class="header-nav">
+				<ul class="header-nav__ul">
+					<li class="header-nav__li">
+						<a href="#" class="header-nav__a"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M14.419 10.4419C14.6631 10.686 15.0588 10.686 15.3029 10.4419C15.547 10.1978 15.547 9.8021 15.3029 9.55802L10.4447 4.69982C10.4351 4.69011 10.4252 4.68071 10.415 4.67164C10.3046 4.57348 10.1592 4.51385 9.99986 4.51385C9.91849 4.51385 9.84074 4.52941 9.76944 4.5577C9.69241 4.5882 9.62021 4.6346 9.5579 4.69691L4.69679 9.55803C4.45271 9.8021 4.45271 10.1978 4.69679 10.4419C4.94087 10.686 5.3366 10.686 5.58067 10.4419L9.37486 6.64772L9.37486 14.8611C9.37486 15.2063 9.65469 15.4861 9.99986 15.4861C10.345 15.4861 10.6249 15.2063 10.6249 14.8611L10.6249 6.64776L14.419 10.4419Z" fill="#1D2433"/>
+						  </svg><span>Export</span></a>
+					</li>
+					<li class="header-nav__li">
+						<a href="#" class="header-nav__a"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M10.625 5.13898C10.625 4.7938 10.3452 4.51398 9.99997 4.51398C9.6548 4.51398 9.37497 4.7938 9.37497 5.13898V9.37502H5.13885C4.79368 9.37502 4.51385 9.65484 4.51385 10C4.51385 10.3452 4.79368 10.625 5.13885 10.625H9.37497V14.8612C9.37497 15.2064 9.6548 15.4862 9.99997 15.4862C10.3452 15.4862 10.625 15.2064 10.625 14.8612V10.625H14.8611C15.2063 10.625 15.4861 10.3452 15.4861 10C15.4861 9.65484 15.2063 9.37502 14.8611 9.37502H10.625V5.13898Z" fill="white" fill-opacity="0.75"/>
+						  </svg><span>New</span></a>
+					</li>
+					<li class="header-nav__li">
+						<a href="#" class="header-nav__a"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M2.4886 3.48695C2.59101 3.26622 2.81222 3.125 3.05555 3.125H16.9444C17.1878 3.125 17.409 3.26622 17.5114 3.48695C17.6138 3.70768 17.5788 3.96778 17.4217 4.15358L12.0139 10.5483V16.25C12.0139 16.4666 11.9017 16.6678 11.7175 16.7817C11.5332 16.8955 11.3031 16.9059 11.1094 16.809L8.3316 15.4201C8.11986 15.3143 7.98611 15.0978 7.98611 14.8611V10.5483L2.57832 4.15358C2.4212 3.96778 2.38619 3.70768 2.4886 3.48695ZM4.40262 4.375L9.08834 9.91587C9.18375 10.0287 9.23611 10.1717 9.23611 10.3194V14.4748L10.7639 15.2387V10.3194C10.7639 10.1717 10.8162 10.0287 10.9117 9.91587L15.5974 4.375H4.40262Z" fill="#1D2433" fill-opacity="0.75"/>
+						  </svg></a>
+					</li>
+					<li class="header-nav__li">
+						<a href="#" class="header-nav__a"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M9.7222 4.16669C8.95514 4.16669 8.33331 4.78851 8.33331 5.55558C8.33331 6.32264 8.95514 6.94446 9.7222 6.94446C10.4893 6.94446 11.1111 6.32264 11.1111 5.55558C11.1111 4.78851 10.4893 4.16669 9.7222 4.16669ZM9.7222 8.6112C8.95514 8.6112 8.33331 9.23303 8.33331 10.0001C8.33331 10.7672 8.95514 11.389 9.7222 11.389C10.4893 11.389 11.1111 10.7672 11.1111 10.0001C11.1111 9.23303 10.4893 8.6112 9.7222 8.6112ZM8.33331 14.8611C8.33331 14.0941 8.95514 13.4722 9.7222 13.4722C10.4893 13.4722 11.1111 14.0941 11.1111 14.8611C11.1111 15.6282 10.4893 16.25 9.7222 16.25C8.95514 16.25 8.33331 15.6282 8.33331 14.8611Z" fill="#1D2433" fill-opacity="0.75"/>
+						  </svg></a>
+					</li>
+					
+				</ul>
+				<!-- <span id="icon-close" onclick="navToggle()" class="material-icons">
+					close
+				</span> -->
+			</nav>
+		</header>
+		<main class="main">
+			<div class="main-dashbord">
+				<div class="main-dashbord__top">
+					<div class="main-dashbord__items">
+						<div class="main-dashbord__item">Results per page</div>
+						<div class="main-dashbord__item twenty"><span>20</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<path d="M10.3883 12.3294L14.0048 8.49415C14.3507 8.12728 14.1057 7.5 13.6165 7.5L6.38358 7.5C5.89436 7.5 5.64936 8.12728 5.99529 8.49415L9.61173 12.3294C9.82618 12.5569 10.1739 12.5569 10.3883 12.3294Z" fill="#1D2433" fill-opacity="0.75"/>
+						  </svg></div>
+					</div>
+					<div class="main-dashbord__items">
+						<div class="main-dashbord__item  arrow"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M9.68689 4.8131C9.88215 5.00837 9.88215 5.32495 9.68689 5.52021L7.37378 7.83332L9.68689 10.1464C9.88215 10.3417 9.88215 10.6583 9.68689 10.8535C9.49163 11.0488 9.17505 11.0488 8.97978 10.8535L6.31312 8.18688C6.11786 7.99161 6.11786 7.67503 6.31312 7.47977L8.97978 4.8131C9.17505 4.61784 9.49163 4.61784 9.68689 4.8131Z" fill="#1D2433" fill-opacity="0.5"/>
+						  </svg></div>
+						<div class="main-dashbord__item">1</div>
+						<div class="main-dashbord__item arrow arrow2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M6.31312 10.8535C6.11786 10.6583 6.11786 10.3417 6.31312 10.1464L8.62623 7.83332L6.31312 5.52021C6.11786 5.32495 6.11786 5.00837 6.31312 4.8131C6.50838 4.61784 6.82496 4.61784 7.02023 4.8131L9.68689 7.47977C9.88215 7.67503 9.88215 7.99161 9.68689 8.18688L7.02023 10.8535C6.82496 11.0488 6.50838 11.0488 6.31312 10.8535Z" fill="#333333"/>
+						  </svg></div>
+					</div>
+					<div class="main-dashbord__items">
+						<div class="main-dashbord__item">Page</div>
+						<div class="main-dashbord__item twenty"><span>20</span><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<path d="M10.3883 12.3294L14.0047 8.49415C14.3507 8.12728 14.1056 7.5 13.6164 7.5L6.38355 7.5C5.89433 7.5 5.64933 8.12728 5.99526 8.49415L9.6117 12.3294C9.82615 12.5569 10.1738 12.5569 10.3883 12.3294Z" fill="#1D2433" fill-opacity="0.75"/>
+						  </svg></div>
+					</div>
+				</div>
+				<div class="main-dashbord__info">
+					<div class="main-dashbord__attributes">
+						<div class="main-dashbord__attribut"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M4.16667 3H15.8333C16.75 3 17.5 3.75 17.5 4.66667V16.3333C17.5 17.25 16.75 18 15.8333 18H4.16667C3.25 18 2.5 17.25 2.5 16.3333V4.66667C2.5 3.75 3.25 3 4.16667 3ZM13.3333 11.3333H6.66667C6.20643 11.3333 5.83333 10.9602 5.83333 10.5C5.83333 10.0398 6.20643 9.66667 6.66667 9.66667H13.3333C13.7936 9.66667 14.1667 10.0398 14.1667 10.5C14.1667 10.9602 13.7936 11.3333 13.3333 11.3333Z" fill="#3D94F6"/>
+						  </svg></div>
+						<div class="main-dashbord__attribut">Type</div>
+						<div class="main-dashbord__attribut">Date</div>
+						<div class="main-dashbord__attribut">Customer</div>
+						<div class="main-dashbord__attribut">Location</div>
+						<div class="main-dashbord__attribut">State</div>
+						<div class="main-dashbord__attribut">Total</div>
+						<div class="main-dashbord__attribut"></div>
+					</div>
+					<div class="main-dashbord__accountes">
+
+						<div class="main-dashbord__account"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<rect x="3.5" y="3.5" width="13" height="13" rx="2" fill="white" stroke="#ADBBCA" stroke-width="2"/>
+						  </svg></div>
+						<div class="main-dashbord__account df"><span>Receipt</span>#100048</div>
+						<div class="main-dashbord__account">21.10.2022</div>
+						<div class="main-dashbord__account">Lydia Dias</div>
+						<div class="main-dashbord__account">Location #12</div>
+						<div class="main-dashbord__account inProgress"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+							<ellipse cx="8.00006" cy="8" rx="4" ry="4" fill="#3D8AF6"/>
+						  </svg>IN PROGRESS</div>
+						<div class="main-dashbord__account df">129.00 €</div>
+						<div class="main-dashbord__account"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M8.33334 5.55555C8.33334 4.78848 8.95517 4.16666 9.72223 4.16666C10.4893 4.16666 11.1111 4.78848 11.1111 5.55555C11.1111 6.32261 10.4893 6.94443 9.72223 6.94443C8.95517 6.94443 8.33334 6.32261 8.33334 5.55555ZM8.61105 10C8.61105 9.23296 9.23288 8.61114 9.99994 8.61114C10.767 8.61114 11.3888 9.23296 11.3888 10C11.3888 10.7671 10.767 11.3889 9.99994 11.3889C9.23288 11.3889 8.61105 10.7671 8.61105 10ZM9.99994 13.4722C9.23288 13.4722 8.61105 14.094 8.61105 14.8611C8.61105 15.6281 9.23288 16.25 9.99994 16.25C10.767 16.25 11.3888 15.6281 11.3888 14.8611C11.3888 14.094 10.767 13.4722 9.99994 13.4722Z" fill="#1D2433" fill-opacity="0.8"/>
+						  </svg></div>
+
+						  <div class="main-dashbord__account"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<rect x="3.5" y="3.5" width="13" height="13" rx="2" fill="white" stroke="#ADBBCA" stroke-width="2"/>
+						  </svg></div>
+						<div class="main-dashbord__account df"><span>Receipt</span>#100048</div>
+						<div class="main-dashbord__account df">21.10.2022 <span class="red">DUE 2 days ago</span></div>
+						<div class="main-dashbord__account">Livia Siphron</div>
+						<div class="main-dashbord__account">Location #12</div>
+						<div class="main-dashbord__account pending"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+							<ellipse cx="8.00006" cy="8" rx="4" ry="4" fill="#1D2433" fill-opacity="0.8"/>
+						  </svg>Pending</div>
+						<div class="main-dashbord__account df">4147.20 € <span class="red">Unpaid 200.29 €</span></div>
+						<div class="main-dashbord__account"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M8.33334 5.55555C8.33334 4.78848 8.95517 4.16666 9.72223 4.16666C10.4893 4.16666 11.1111 4.78848 11.1111 5.55555C11.1111 6.32261 10.4893 6.94443 9.72223 6.94443C8.95517 6.94443 8.33334 6.32261 8.33334 5.55555ZM8.61105 10C8.61105 9.23296 9.23288 8.61114 9.99994 8.61114C10.767 8.61114 11.3888 9.23296 11.3888 10C11.3888 10.7671 10.767 11.3889 9.99994 11.3889C9.23288 11.3889 8.61105 10.7671 8.61105 10ZM9.99994 13.4722C9.23288 13.4722 8.61105 14.094 8.61105 14.8611C8.61105 15.6281 9.23288 16.25 9.99994 16.25C10.767 16.25 11.3888 15.6281 11.3888 14.8611C11.3888 14.094 10.767 13.4722 9.99994 13.4722Z" fill="#1D2433" fill-opacity="0.8"/>
+						  </svg></div>
+
+						  <div class="main-dashbord__account"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<rect x="3.5" y="3.5" width="13" height="13" rx="2" fill="white" stroke="#ADBBCA" stroke-width="2"/>
+						  </svg></div>
+						<div class="main-dashbord__account df"><span>Invoice-Waybill</span>#100048</div>
+						<div class="main-dashbord__account df">21.10.2022 </div>
+						<div class="main-dashbord__account">Livia Siphron</div>
+						<div class="main-dashbord__account">Location #12</div>
+						<div class="main-dashbord__account green"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+							<ellipse cx="8.00006" cy="8" rx="4" ry="4" fill="#5ABB7A"/>
+						  </svg>Success</div>
+						<div class="main-dashbord__account df">129.00 €</div>
+						<div class="main-dashbord__account"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M8.33334 5.55555C8.33334 4.78848 8.95517 4.16666 9.72223 4.16666C10.4893 4.16666 11.1111 4.78848 11.1111 5.55555C11.1111 6.32261 10.4893 6.94443 9.72223 6.94443C8.95517 6.94443 8.33334 6.32261 8.33334 5.55555ZM8.61105 10C8.61105 9.23296 9.23288 8.61114 9.99994 8.61114C10.767 8.61114 11.3888 9.23296 11.3888 10C11.3888 10.7671 10.767 11.3889 9.99994 11.3889C9.23288 11.3889 8.61105 10.7671 8.61105 10ZM9.99994 13.4722C9.23288 13.4722 8.61105 14.094 8.61105 14.8611C8.61105 15.6281 9.23288 16.25 9.99994 16.25C10.767 16.25 11.3888 15.6281 11.3888 14.8611C11.3888 14.094 10.767 13.4722 9.99994 13.4722Z" fill="#1D2433" fill-opacity="0.8"/>
+						  </svg></div>
+
+						  <div class="main-dashbord__account blue"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <rect x="2.5" y="2.5" width="15" height="15" rx="3" fill="#3D8AF6"/>
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6781 7.73361C14.9221 7.48954 14.9221 7.09381 14.6781 6.84973C14.434 6.60565 14.0382 6.60565 13.7942 6.84973L8.26389 12.38L6.06694 10.1831C5.82286 9.93899 5.42714 9.93899 5.18306 10.1831C4.93898 10.4271 4.93898 10.8229 5.18306 11.0669L7.82195 13.7058C8.06602 13.9499 8.46175 13.9499 8.70583 13.7058L14.6781 7.73361Z" fill="white"/>
+</svg></div>
+						<div class="main-dashbord__account df blue"><span>Invoice-Waybill</span>#100048</div>
+						<div class="main-dashbord__account df blue">21.10.2022 </div>
+						<div class="main-dashbord__account blue">Dulce Lipshutz</div>
+						<div class="main-dashbord__account blue">Location #12</div>
+						<div class="main-dashbord__account pending blue"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+							<ellipse cx="8.00006" cy="8" rx="4" ry="4" fill="#1D2433" fill-opacity="0.8"/>
+						  </svg>Complete</div>
+						<div class="main-dashbord__account df blue">129.00 €</div>
+						<div class="main-dashbord__account blue"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M8.33334 5.55555C8.33334 4.78848 8.95517 4.16666 9.72223 4.16666C10.4893 4.16666 11.1111 4.78848 11.1111 5.55555C11.1111 6.32261 10.4893 6.94443 9.72223 6.94443C8.95517 6.94443 8.33334 6.32261 8.33334 5.55555ZM8.61105 10C8.61105 9.23296 9.23288 8.61114 9.99994 8.61114C10.767 8.61114 11.3888 9.23296 11.3888 10C11.3888 10.7671 10.767 11.3889 9.99994 11.3889C9.23288 11.3889 8.61105 10.7671 8.61105 10ZM9.99994 13.4722C9.23288 13.4722 8.61105 14.094 8.61105 14.8611C8.61105 15.6281 9.23288 16.25 9.99994 16.25C10.767 16.25 11.3888 15.6281 11.3888 14.8611C11.3888 14.094 10.767 13.4722 9.99994 13.4722Z" fill="#1D2433" fill-opacity="0.8"/>
+						  </svg></div>
+
+						  <div class="main-dashbord__account"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<rect x="3.5" y="3.5" width="13" height="13" rx="2" fill="white" stroke="#ADBBCA" stroke-width="2"/>
+						  </svg></div>
+						<div class="main-dashbord__account df"><span>Receipt</span>#100048</div>
+						<div class="main-dashbord__account">21.10.2022</div>
+						<div class="main-dashbord__account">Lydia Dias</div>
+						<div class="main-dashbord__account">Location #12</div>
+						<div class="main-dashbord__account inProgress"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+							<ellipse cx="8.00006" cy="8" rx="4" ry="4" fill="#3D8AF6"/>
+						  </svg>IN PROGRESS</div>
+						<div class="main-dashbord__account df">129.00 €</div>
+						<div class="main-dashbord__account"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M8.33334 5.55555C8.33334 4.78848 8.95517 4.16666 9.72223 4.16666C10.4893 4.16666 11.1111 4.78848 11.1111 5.55555C11.1111 6.32261 10.4893 6.94443 9.72223 6.94443C8.95517 6.94443 8.33334 6.32261 8.33334 5.55555ZM8.61105 10C8.61105 9.23296 9.23288 8.61114 9.99994 8.61114C10.767 8.61114 11.3888 9.23296 11.3888 10C11.3888 10.7671 10.767 11.3889 9.99994 11.3889C9.23288 11.3889 8.61105 10.7671 8.61105 10ZM9.99994 13.4722C9.23288 13.4722 8.61105 14.094 8.61105 14.8611C8.61105 15.6281 9.23288 16.25 9.99994 16.25C10.767 16.25 11.3888 15.6281 11.3888 14.8611C11.3888 14.094 10.767 13.4722 9.99994 13.4722Z" fill="#1D2433" fill-opacity="0.8"/>
+						  </svg></div>
+
+						  
+						  <div class="main-dashbord__account blue"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<rect x="2.5" y="2.5" width="15" height="15" rx="3" fill="#3D8AF6"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M14.6781 7.73361C14.9221 7.48954 14.9221 7.09381 14.6781 6.84973C14.434 6.60565 14.0382 6.60565 13.7942 6.84973L8.26389 12.38L6.06694 10.1831C5.82286 9.93899 5.42714 9.93899 5.18306 10.1831C4.93898 10.4271 4.93898 10.8229 5.18306 11.0669L7.82195 13.7058C8.06602 13.9499 8.46175 13.9499 8.70583 13.7058L14.6781 7.73361Z" fill="white"/>
+						  </svg></div>
+												  <div class="main-dashbord__account df blue"><span>Invoice-Waybill</span>#100048</div>
+												  <div class="main-dashbord__account df blue">21.10.2022 </div>
+												  <div class="main-dashbord__account blue">Dulce Lipshutz</div>
+												  <div class="main-dashbord__account blue">Location #12</div>
+												  <div class="main-dashbord__account pending blue"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+													  <ellipse cx="8.00006" cy="8" rx="4" ry="4" fill="#1D2433" fill-opacity="0.8"/>
+													</svg>Complete</div>
+												  <div class="main-dashbord__account df blue">129.00 €</div>
+												  <div class="main-dashbord__account blue"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+													  <path fill-rule="evenodd" clip-rule="evenodd" d="M8.33334 5.55555C8.33334 4.78848 8.95517 4.16666 9.72223 4.16666C10.4893 4.16666 11.1111 4.78848 11.1111 5.55555C11.1111 6.32261 10.4893 6.94443 9.72223 6.94443C8.95517 6.94443 8.33334 6.32261 8.33334 5.55555ZM8.61105 10C8.61105 9.23296 9.23288 8.61114 9.99994 8.61114C10.767 8.61114 11.3888 9.23296 11.3888 10C11.3888 10.7671 10.767 11.3889 9.99994 11.3889C9.23288 11.3889 8.61105 10.7671 8.61105 10ZM9.99994 13.4722C9.23288 13.4722 8.61105 14.094 8.61105 14.8611C8.61105 15.6281 9.23288 16.25 9.99994 16.25C10.767 16.25 11.3888 15.6281 11.3888 14.8611C11.3888 14.094 10.767 13.4722 9.99994 13.4722Z" fill="#1D2433" fill-opacity="0.8"/>
+													</svg></div>
+
+													<div class="main-dashbord__account"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+														<rect x="3.5" y="3.5" width="13" height="13" rx="2" fill="white" stroke="#ADBBCA" stroke-width="2"/>
+													  </svg></div>
+													<div class="main-dashbord__account df"><span>Receipt</span>#100048</div>
+													<div class="main-dashbord__account df">21.10.2022 <span class="red">DUE 2 days ago</span></div>
+													<div class="main-dashbord__account">Livia Siphron</div>
+													<div class="main-dashbord__account">Location #12</div>
+													<div class="main-dashbord__account pending"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+														<ellipse cx="8.00006" cy="8" rx="4" ry="4" fill="#1D2433" fill-opacity="0.8"/>
+													  </svg>Pending</div>
+													<div class="main-dashbord__account df">4147.20 € <span class="red">Unpaid 200.29 €</span></div>
+													<div class="main-dashbord__account"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M8.33334 5.55555C8.33334 4.78848 8.95517 4.16666 9.72223 4.16666C10.4893 4.16666 11.1111 4.78848 11.1111 5.55555C11.1111 6.32261 10.4893 6.94443 9.72223 6.94443C8.95517 6.94443 8.33334 6.32261 8.33334 5.55555ZM8.61105 10C8.61105 9.23296 9.23288 8.61114 9.99994 8.61114C10.767 8.61114 11.3888 9.23296 11.3888 10C11.3888 10.7671 10.767 11.3889 9.99994 11.3889C9.23288 11.3889 8.61105 10.7671 8.61105 10ZM9.99994 13.4722C9.23288 13.4722 8.61105 14.094 8.61105 14.8611C8.61105 15.6281 9.23288 16.25 9.99994 16.25C10.767 16.25 11.3888 15.6281 11.3888 14.8611C11.3888 14.094 10.767 13.4722 9.99994 13.4722Z" fill="#1D2433" fill-opacity="0.8"/>
+													  </svg></div>
+
+													  <div class="main-dashbord__account"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+														<rect x="3.5" y="3.5" width="13" height="13" rx="2" fill="white" stroke="#ADBBCA" stroke-width="2"/>
+													  </svg></div>
+													<div class="main-dashbord__account df"><span>Receipt</span>#100048</div>
+													<div class="main-dashbord__account df">21.10.2022 <span class="red">DUE 2 days ago</span></div>
+													<div class="main-dashbord__account">Livia Siphron</div>
+													<div class="main-dashbord__account">Location #12</div>
+													<div class="main-dashbord__account pending"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+														<ellipse cx="8.00006" cy="8" rx="4" ry="4" fill="#1D2433" fill-opacity="0.8"/>
+													  </svg>Pending</div>
+													<div class="main-dashbord__account df">4147.20 € <span class="red">Unpaid 200.29 €</span></div>
+													<div class="main-dashbord__account"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M8.33334 5.55555C8.33334 4.78848 8.95517 4.16666 9.72223 4.16666C10.4893 4.16666 11.1111 4.78848 11.1111 5.55555C11.1111 6.32261 10.4893 6.94443 9.72223 6.94443C8.95517 6.94443 8.33334 6.32261 8.33334 5.55555ZM8.61105 10C8.61105 9.23296 9.23288 8.61114 9.99994 8.61114C10.767 8.61114 11.3888 9.23296 11.3888 10C11.3888 10.7671 10.767 11.3889 9.99994 11.3889C9.23288 11.3889 8.61105 10.7671 8.61105 10ZM9.99994 13.4722C9.23288 13.4722 8.61105 14.094 8.61105 14.8611C8.61105 15.6281 9.23288 16.25 9.99994 16.25C10.767 16.25 11.3888 15.6281 11.3888 14.8611C11.3888 14.094 10.767 13.4722 9.99994 13.4722Z" fill="#1D2433" fill-opacity="0.8"/>
+													  </svg></div>
+													  <div class="main-dashbord__account"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+														<rect x="3.5" y="3.5" width="13" height="13" rx="2" fill="white" stroke="#ADBBCA" stroke-width="2"/>
+													  </svg></div>
+													<div class="main-dashbord__account df"><span>Receipt</span>#100048</div>
+													<div class="main-dashbord__account">21.10.2022</div>
+													<div class="main-dashbord__account">Lydia Dias</div>
+													<div class="main-dashbord__account">Location #12</div>
+													<div class="main-dashbord__account inProgress"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+														<ellipse cx="8.00006" cy="8" rx="4" ry="4" fill="#3D8AF6"/>
+													  </svg>IN PROGRESS</div>
+													<div class="main-dashbord__account df">129.00 €</div>
+													<div class="main-dashbord__account"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+														<path fill-rule="evenodd" clip-rule="evenodd" d="M8.33334 5.55555C8.33334 4.78848 8.95517 4.16666 9.72223 4.16666C10.4893 4.16666 11.1111 4.78848 11.1111 5.55555C11.1111 6.32261 10.4893 6.94443 9.72223 6.94443C8.95517 6.94443 8.33334 6.32261 8.33334 5.55555ZM8.61105 10C8.61105 9.23296 9.23288 8.61114 9.99994 8.61114C10.767 8.61114 11.3888 9.23296 11.3888 10C11.3888 10.7671 10.767 11.3889 9.99994 11.3889C9.23288 11.3889 8.61105 10.7671 8.61105 10ZM9.99994 13.4722C9.23288 13.4722 8.61105 14.094 8.61105 14.8611C8.61105 15.6281 9.23288 16.25 9.99994 16.25C10.767 16.25 11.3888 15.6281 11.3888 14.8611C11.3888 14.094 10.767 13.4722 9.99994 13.4722Z" fill="#1D2433" fill-opacity="0.8"/>
+													  </svg></div><div class="main-dashbord__account"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<rect x="3.5" y="3.5" width="13" height="13" rx="2" fill="white" stroke="#ADBBCA" stroke-width="2"/>
+						  </svg></div>
+						<div class="main-dashbord__account df"><span>Receipt</span>#100048</div>
+						<div class="main-dashbord__account">21.10.2022</div>
+						<div class="main-dashbord__account">Lydia Dias</div>
+						<div class="main-dashbord__account">Location #12</div>
+						<div class="main-dashbord__account inProgress"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+							<ellipse cx="8.00006" cy="8" rx="4" ry="4" fill="#3D8AF6"/>
+						  </svg>IN PROGRESS</div>
+						<div class="main-dashbord__account df">129.00 €</div>
+						<div class="main-dashbord__account"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M8.33334 5.55555C8.33334 4.78848 8.95517 4.16666 9.72223 4.16666C10.4893 4.16666 11.1111 4.78848 11.1111 5.55555C11.1111 6.32261 10.4893 6.94443 9.72223 6.94443C8.95517 6.94443 8.33334 6.32261 8.33334 5.55555ZM8.61105 10C8.61105 9.23296 9.23288 8.61114 9.99994 8.61114C10.767 8.61114 11.3888 9.23296 11.3888 10C11.3888 10.7671 10.767 11.3889 9.99994 11.3889C9.23288 11.3889 8.61105 10.7671 8.61105 10ZM9.99994 13.4722C9.23288 13.4722 8.61105 14.094 8.61105 14.8611C8.61105 15.6281 9.23288 16.25 9.99994 16.25C10.767 16.25 11.3888 15.6281 11.3888 14.8611C11.3888 14.094 10.767 13.4722 9.99994 13.4722Z" fill="#1D2433" fill-opacity="0.8"/>
+						  </svg></div>
+
+						  
+
+					</div>
+				</div>
+			</div>
+			<saidbar class="main-customers">
+				<div class="customers-top">
+				<div class="customers">Customers</div>
+				<div class="add"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M5.41665 6.52778C5.41665 5.33883 6.38048 4.375 7.56942 4.375C8.75837 4.375 9.7222 5.33883 9.7222 6.52778C9.7222 7.71672 8.75837 8.68056 7.56942 8.68056C6.38048 8.68056 5.41665 7.71672 5.41665 6.52778ZM7.56942 3.125C5.69012 3.125 4.16665 4.64848 4.16665 6.52778C4.16665 8.40708 5.69012 9.93055 7.56942 9.93055C9.44873 9.93055 10.9722 8.40708 10.9722 6.52778C10.9722 4.64848 9.44873 3.125 7.56942 3.125ZM5.1388 11.4583C4.23633 11.4583 3.37082 11.8168 2.73267 12.455C2.09453 13.0931 1.73602 13.9586 1.73602 14.8611V16.25C1.73602 16.5952 2.01584 16.875 2.36102 16.875C2.7062 16.875 2.98602 16.5952 2.98602 16.25V14.8611C2.98602 14.2902 3.21283 13.7426 3.61656 13.3389C4.02028 12.9351 4.56785 12.7083 5.1388 12.7083H9.99991C10.5709 12.7083 11.1184 12.9351 11.5222 13.3389C11.9259 13.7426 12.1527 14.2902 12.1527 14.8611V16.25C12.1527 16.5952 12.4325 16.875 12.7777 16.875C13.1229 16.875 13.4027 16.5952 13.4027 16.25V14.8611C13.4027 13.9586 13.0442 13.0931 12.406 12.455C11.7679 11.8168 10.9024 11.4583 9.99991 11.4583H5.1388ZM15.5556 6.59709C15.9008 6.59709 16.1806 6.87691 16.1806 7.22209V8.68042H17.6389C17.9841 8.68042 18.2639 8.96024 18.2639 9.30542C18.2639 9.6506 17.9841 9.93042 17.6389 9.93042H16.1806V11.3888C16.1806 11.7339 15.9008 12.0138 15.5556 12.0138C15.2104 12.0138 14.9306 11.7339 14.9306 11.3888V9.93042H13.4723C13.1271 9.93042 12.8473 9.6506 12.8473 9.30542C12.8473 8.96024 13.1271 8.68042 13.4723 8.68042H14.9306V7.22209C14.9306 6.87691 15.2104 6.59709 15.5556 6.59709Z" fill="#1D2433"/>
+				  </svg><span>Add</span></div>
+			</div>
+			<div class="adc">ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+			<div class="search">
+				<div class="input"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M4.79166 8.74999C4.79166 6.56386 6.56386 4.79166 8.74999 4.79166C10.9361 4.79166 12.7083 6.56386 12.7083 8.74999C12.7083 10.9361 10.9361 12.7083 8.74999 12.7083C6.56386 12.7083 4.79166 10.9361 4.79166 8.74999ZM8.74999 3.54166C5.87351 3.54166 3.54166 5.87351 3.54166 8.74999C3.54166 11.6265 5.87351 13.9583 8.74999 13.9583C9.96796 13.9583 11.0883 13.5403 11.9753 12.8398C11.9988 12.876 12.0263 12.9102 12.058 12.9419L16.2247 17.1086C16.4688 17.3527 16.8645 17.3527 17.1086 17.1086C17.3527 16.8645 17.3527 16.4688 17.1086 16.2247L12.9419 12.058C12.9102 12.0263 12.876 11.9988 12.8398 11.9753C13.5403 11.0883 13.9583 9.96796 13.9583 8.74999C13.9583 5.87351 11.6265 3.54166 8.74999 3.54166Z" fill="#1D2433" fill-opacity="0.5"/>
+				  </svg></div>
+				<div class="search-button">Search</div>
+			</div>
+			<div class="customers-items">
+				<div class="customers-item"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+  <circle cx="4" cy="4" r="4" fill="#E1E6EF"/>
+</svg><span>Marathon Oil Corp.</span></div>
+				<div class="customers-item"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+  <circle cx="4" cy="4" r="4" fill="#E1E6EF"/>
+</svg><span>Sealed Air</span></div>
+				<div class="customers-item"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+  <circle cx="4" cy="4" r="4" fill="#E1E6EF"/>
+</svg><span>Southern Company</span></div>
+				<div class="customers-item"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+  <circle cx="4" cy="4" r="4" fill="#E1E6EF"/>
+</svg><span>Atmos Energy</span></div>
+				<div class="customers-item"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+  <circle cx="4" cy="4" r="4" fill="#E1E6EF"/>
+</svg><span>Equifax Inc.</span></div>
+				<div class="customers-item"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+  <circle cx="4" cy="4" r="4" fill="#E1E6EF"/>
+</svg><span>Kansas City Southern</span></div>
+				<div class="customers-item"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+  <circle cx="4" cy="4" r="4" fill="#E1E6EF"/>
+</svg><span>Fidelity National Information Services</span></div>
+				<div class="customers-item"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+  <circle cx="4" cy="4" r="4" fill="#E1E6EF"/>
+</svg><span>Colgate-Palmolive</span></div>
+				<div class="customers-item"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+  <circle cx="4" cy="4" r="4" fill="#E1E6EF"/>
+</svg><span>Air Products & Chemicals Inc</span></div>
+				<div class="customers-item"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+  <circle cx="4" cy="4" r="4" fill="#E1E6EF"/>
+</svg><span>Intuitive Surgical Inc.</span></div>
+				<div class="customers-item"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+  <circle cx="4" cy="4" r="4" fill="#E1E6EF"/>
+</svg><span>Quest Diagnostics</span></div>
+				<div class="customers-item"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+  <circle cx="4" cy="4" r="4" fill="#E1E6EF"/>
+</svg><span>Crown Castle International Corp.</span></div>
+				<div class="customers-item"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+  <circle cx="4" cy="4" r="4" fill="#E1E6EF"/>
+</svg><span>News Corp. Class A</span></div>
+				<div class="customers-item"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+  <circle cx="4" cy="4" r="4" fill="#E1E6EF"/>
+</svg><span>Federal Realty Investment Trust</span></div>
+				<div class="customers-item"><svg xmlns="http://www.w3.org/2000/svg" width="8" height="8" viewBox="0 0 8 8" fill="none">
+  <circle cx="4" cy="4" r="4" fill="#E1E6EF"/>
+</svg><span>Humana Inc.</span></div>
+			</div>
+			<div class="customers-bottom">
+				<div class="bottom-top"><span>Add customers</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M17.5893 7.58925C17.9148 7.26381 17.9148 6.73617 17.5893 6.41073C17.2639 6.0853 16.7363 6.0853 16.4108 6.41073L12.0001 10.8215L7.58934 6.41073C7.2639 6.0853 6.73626 6.0853 6.41083 6.41073C6.08539 6.73617 6.08539 7.26381 6.41083 7.58925L10.8216 12L6.41083 16.4107C6.08539 16.7362 6.08539 17.2638 6.41083 17.5892C6.73626 17.9147 7.2639 17.9147 7.58934 17.5892L12.0001 13.1785L16.4108 17.5892C16.7363 17.9147 17.2639 17.9147 17.5893 17.5892C17.9148 17.2638 17.9148 16.7362 17.5893 16.4107L13.1786 12L17.5893 7.58925Z" fill="#1D2433" fill-opacity="0.75"/>
+				  </svg></div>
+				<div class="bottom-main">You can add customers by pessing the Add + button in the corner or by importing your clients from a CSV file</div>
+				<div class="bottom-import"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M10.4076 4.47709C9.5524 4.09938 8.62267 3.92059 7.68839 3.95419C6.7541 3.98779 5.83962 4.2329 5.01377 4.67106C4.18793 5.10923 3.47224 5.72904 2.9206 6.48382C2.36895 7.23861 1.99573 8.1087 1.82901 9.0286C1.6623 9.94851 1.70645 10.8942 1.95813 11.7946C2.2098 12.695 2.66246 13.5265 3.28202 14.2266C3.51077 14.4851 3.90576 14.5093 4.16426 14.2805C4.42275 14.0518 4.44687 13.6568 4.21811 13.3983C3.72386 12.8397 3.36276 12.1764 3.16198 11.4581C2.9612 10.7398 2.92598 9.98536 3.05898 9.25151C3.19197 8.51766 3.48972 7.82354 3.92979 7.2214C4.36987 6.61927 4.94081 6.12482 5.59963 5.77527C6.25845 5.42572 6.98798 5.23018 7.73331 5.20338C8.47863 5.17658 9.22033 5.31921 9.90256 5.62053C10.5848 5.92185 11.1898 6.37402 11.672 6.94298C12.1541 7.51195 12.501 8.18289 12.6863 8.90529C12.7573 9.18169 13.0064 9.37495 13.2917 9.37495H14.1672C14.7724 9.37448 15.3621 9.56687 15.8505 9.92422C16.339 10.2816 16.7009 10.7853 16.8837 11.3622C17.0665 11.9392 17.0607 12.5594 16.8671 13.1328C16.6736 13.7062 16.3023 14.2031 15.8072 14.5512C15.5249 14.7498 15.4569 15.1396 15.6555 15.422C15.854 15.7043 16.2439 15.7723 16.5262 15.5737C17.2387 15.0727 17.7729 14.3578 18.0515 13.5326C18.33 12.7074 18.3384 11.8149 18.0753 10.9847C17.8123 10.1544 17.2915 9.42958 16.5886 8.91536C15.8858 8.40123 15.037 8.12438 14.1662 8.12495L13.7565 8.12495C13.7162 8.00743 13.6724 7.89125 13.6251 7.77657C13.3803 7.18216 13.0435 6.62793 12.6256 6.13481C12.0211 5.4216 11.2628 4.85481 10.4076 4.47709ZM10.0001 17.7083C9.65496 17.7083 9.37514 17.4285 9.37514 17.0833L9.37514 12.3423L7.66423 14.0532C7.42016 14.2973 7.02443 14.2973 6.78035 14.0532C6.53627 13.8091 6.53627 13.4134 6.78035 13.1693L9.55275 10.3969C9.66626 10.2806 9.82476 10.2083 10.0001 10.2083C10.1776 10.2083 10.3377 10.2823 10.4515 10.401L13.2198 13.1693C13.4639 13.4134 13.4639 13.8091 13.2198 14.0532C12.9757 14.2973 12.58 14.2973 12.3359 14.0532L10.6251 12.3424L10.6251 17.0833C10.6251 17.4285 10.3453 17.7083 10.0001 17.7083Z" fill="#1D2433" fill-opacity="0.75"/>
+				  </svg><span>Import customers</span></div>
+			
+			</div>
+
+		</saidbar>
+		</main>
+	</div>
+		<script src="script.js"></script>
+</body>
+
+</html>

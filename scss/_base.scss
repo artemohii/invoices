@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font;
+  color: $color-body;
+}
+html,
+body {
+  width: 100%;
+  &._overflow {
+    overflow: hidden;
+  }
+}
+a {
+  color: $color-white;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.container {
+  max-width: 1611px;
+  // padding: 0 20px;
+  width: 100%;
+  border-radius: 8px;
+
+  // margin: 0 auto;
+  margin-top: 20px;
+  margin-left: 50px;
+  border-radius: 8px;
+  // background: #fff;
+
+  box-shadow: 0px 0px 1px 0px rgba(9, 30, 66, 0.31),
+    0px 18px 28px 0px rgba(9, 30, 66, 0.15);
+}
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
